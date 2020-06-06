@@ -148,7 +148,7 @@ namespace Board_Game
                     switch (axis)
                     {
                         case 1:
-                            if (this.x < game.board_size)
+                            if (this.x < game.board_size-1)
                             {
                                 setX(this.x + 1);
                                 complete = true;
@@ -160,7 +160,7 @@ namespace Board_Game
                                 break;
                             }
                         case 2:
-                            if (this.y < game.board_size)
+                            if (this.y < game.board_size-1)
                             {
                                 setY(this.y + 1);
                                 complete = true;
@@ -173,7 +173,7 @@ namespace Board_Game
                                 break;
                             }
                         case 3:
-                            if (this.z < game.board_size)
+                            if (this.z < game.board_size-1)
                             {
                                 setZ(this.z + 1);
                                 complete = true;
