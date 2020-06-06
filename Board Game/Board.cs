@@ -8,12 +8,12 @@ namespace Board_Game
     {
         private int[][][] board;
         public int board_size = 0;
-        private int row;
-        private int col;
-        private int dep;
+        public int row { get; set; }
+        public int col { get; set; }
+        public int dep { get; set; }
 
         //Generates the board as a 3D array
-        public void setBoard(int size) {
+        public void SetBoard(int size) {
             board = new int[size][][];
 
             for (int i = 0; i < size; i++)
@@ -30,7 +30,7 @@ namespace Board_Game
         }
 
         //Generates the random position on the board
-        public void genPos() {
+        public void GenPos() {
             var rand = new Random();
             row = rand.Next(0, this.board_size);
             col = rand.Next(0, this.board_size);
@@ -39,21 +39,9 @@ namespace Board_Game
             
         }
 
-        public int getRow() {
-            return row;
-        }
-
-        public int getCol() {
-            return col;
-        }
-
-        public int getDep()
-        {
-            return dep;
-        }
 
         //Only used for debugging and checking the program works
-        public void printBoard() {
+        public void PrintBoard() {
             foreach (int[][] i in board) {
                 foreach(int[] j in i) {
                     foreach (int k in j)

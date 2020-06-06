@@ -26,20 +26,20 @@ namespace Board_Game
                 }
             }
 
-            game_board.setBoard(game_board.board_size);
-            game_board.genPos();
+            game_board.SetBoard(game_board.board_size);
+            game_board.GenPos();
 
-            p1.xSelection();
-            p1.ySelection();
-            p1.zSelection();
-            p1.checkSolution();
+            p1.X = (p1.AxisSelection(nameof(p1.X)));
+            p1.Y = (p1.AxisSelection(nameof(p1.Y)));
+            p1.Z = (p1.AxisSelection(nameof(p1.Z)));
+            p1.CheckSolution();
 
 
             while (!p1.solved)
             {
-                p1.setAxis();
-                p1.adjustAxis();
-                p1.checkSolution();
+                p1.SetAxis();
+                p1.AdjustAxis();
+                p1.CheckSolution();
             }
 
             Console.WriteLine("You Win!");
