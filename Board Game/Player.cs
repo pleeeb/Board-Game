@@ -268,9 +268,6 @@ namespace Board_Game
 
         //Checks x, y and z values to see if they are matching/too high/too low
         public void checkSolution() {
-            Console.WriteLine("x = " + x);
-            Console.WriteLine("y = " + y);
-            Console.WriteLine("z = " + z);
             if (this.x == game.getCol() && this.y == game.getRow() && this.z == game.getDep())
             {
                 Console.WriteLine("You are spot on!");

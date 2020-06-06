@@ -28,7 +28,6 @@ namespace Board_Game
 
             game_board.setBoard(game_board.board_size);
             game_board.genPos();
-            game_board.printBoard();
 
             p1.xSelection();
             p1.ySelection();
